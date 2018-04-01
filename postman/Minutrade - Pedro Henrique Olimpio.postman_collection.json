@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "2509a7e4-20a0-4e4b-8935-bf69c2f6e1d2",
+		"name": "Minutrade - Pedro Henrique Olimpio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:1234/v1/client",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cpf\": \"22781746304\",\n\t\"name\": \"Example\",\n\t\"email\": \"a@ig.com.br\",\n\t\"maritalStatus\": 1,\n\t\"address\": \"Rua Pedra Lunar, 259, Apto 202, Rio Branco - Belo Horizonte / MG\",\n\t\"phones\": [\n\t\t\t\"31982016375\"\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:12345/v1/client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"v1",
+						"client"
+					]
+				},
+				"description": "Method responsible for add a new client."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:12345/v1/client/:cpf",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:12345/v1/client/22781746304",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"v1",
+						"client",
+						"22781746304"
+					]
+				},
+				"description": "Get the client"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:12345/v1/clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:12345/v1/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"v1",
+						"clients"
+					]
+				},
+				"description": "Get all Clients"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:12345/v1/client/:cpf",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:12345/v1/client/22781746304",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"v1",
+						"client",
+						"22781746304"
+					]
+				},
+				"description": "Delete a single client"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:12345/v1/client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cpf\": \"22781746304\",\n\t\"name\": \"Example 3\",\n\t\"email\": \"vs35@hotmail.com\",\n\t\"maritalStatus\": 1,\n\t\"address\": \"Rua Pedra Lunar2, 259, Apto 202, Rio Branco - Belo Horizonte / MG\",\n\t\"phones\": [\n\t\t\t\"31982016375\"\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:12345/v1/client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"v1",
+						"client"
+					]
+				},
+				"description": "Updating client row by cpf"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:12345/v1/client/search/:name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:12345/v1/client/search/pedro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"v1",
+						"client",
+						"search",
+						"pedro"
+					]
+				},
+				"description": "Search by name"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e3b0bcc9-13e9-45bf-aa12-c585326983a9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "56d17ec9-b8b4-42fc-b5e6-bacd8b6d4edc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
