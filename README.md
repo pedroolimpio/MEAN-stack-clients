@@ -24,12 +24,12 @@ You can access the `dashboard` using this URL: `http://localhost:4200`.
 
 if you want to consume the `api` outside dashboard, you can use you can use this URL: `http://localhost:12345` and the PATHs discribed bellow:
 
-<i> /clients </i> | Method: GET -> Get all clients
-<i> /client/:cpf </i> | Method: GET -> Get a single client by CPF
-<i> /client </i> | Method: PUT -> Add a new client (JSON Body)
-<i> /client </i> | Method: POST -> Update an existing client
-<i> /client/:cpf </i> | Method: DELETE -> Delete an existing client by CPF
-<i> /client/search/:name </i> | Method: GET -> Search by partial name or a full name (Example: Pedro Henrique Olímpio or Olímpio)
+* <i> /clients </i> | Method: GET -> Get all clients
+* <i> /client/:cpf </i> | Method: GET -> Get a single client by CPF
+* <i> /client </i> | Method: PUT -> Add a new client (JSON Body)
+* <i> /client </i> | Method: POST -> Update an existing client
+* <i> /client/:cpf </i> | Method: DELETE -> Delete an existing client by CPF
+* <i> /client/search/:name </i> | Method: GET -> Search by partial name or a full name (Example: Pedro Henrique Olímpio or Olímpio)
 
 At the root directory contains the directory [postman](getpostman.com). This directory a collections file you can use to test the API outside dashboard as well. 
 
