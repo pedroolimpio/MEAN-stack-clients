@@ -12,6 +12,8 @@ ___
 
 First of all you need to download the `Angular CLI`, `Node.JS` and `MongoDB`. At the moment of this publishment the latest version of this components are the related above.
 
+After that create a database in MongoDB with name `minutrade`. If you want to connect to your database inside `api` directory there are a `model` directory and a `DB` file that contains the connection with database.
+
 The project contains 2 directories `api` and `dashboard`. After you download the project is necessary download the dependencies of this project. So you need to go to `api`  directory and execute the following command:
 
 `npm install`
