@@ -1,0 +1,84 @@
+<form materialize class="col s12">
+  <div class="row">
+    <div class="input-field col s8">
+      Name:
+      <input required placeholder="Type the name" id="name" name="name" type="text" class="validate" [(ngModel)]="model.name" #name>
+    </div>
+    <div class="input-field col s3">
+      CPF:
+      <input required placeholder="Type the CPF" id="cpf" name="cpf" type="text" class="validate" [(ngModel)]="model.cpf" #cpf
+        maxlength="11">
+      <br />
+    </div>
+
+    <div class="input-field col s5">
+      Email:
+      <input required placeholder="Type the email" id="email" name="email" type="text" class="validate" [(ngModel)]="model.email"
+        #email>
+    </div>
+
+    <div class="input-field col s11">
+      Full address:
+      <input required placeholder="Type the address" id="address" name="address" type="text" class="validate" [(ngModel)]="model.address"
+        #address>
+    </div>
+
+    <div class="select-field col s4">
+      Marital status:
+      <select required class="browser-default" material-select (change)="onChangeMaritalStatus($event.target.value)">
+        <option value="-1">SELECIONE</option>
+        <option *ngFor="let marital of maritalStatus" value="{{marital.value}}">{{marital.name}}</option>
+      </select>
+    </div>
+
+    <div class="table-responsive color-text-default-inteo">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Phones</th>
+            <div class="collapsible-header s1">
+              <a (click)="openModal()">
+                <i class="material-icons">note_add</i>
+              </a>
+            </div>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let phone of model.phones">
+            <td>
+              <div class="collapsible-header">{{phone}}</div>
+            </td>
+            <td>
+              <div class="collapsible-header s1">
+                <a (click)="deletePhone(phone)">
+                  <i class="material-icons">delete</i>
+                </a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+  <div id="modal1" class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
+    <div class="modal-content">
+      <h4>Type the phone number:</h4>
+      <div class="input-field col s11">
+        <input placeholder="Type phone number" id="tempPhone" name="tempPhone" type="text" class="validate" [(ngModel)]="tempPhone">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="waves-effect waves-green btn-flat" (click)="closeModal()">Cancel</a>
+      <a class="waves-effect waves-green btn-flat" (click)="addPhone(tempPhone)">Add</a>
+    </div>
+  </div>
+
+
+  <a class="waves-effect waves-light btn" (click)="onSubmit()">Submit</a>
+
+  <br />
+
+  <label>{{responseSubmit}}</label>
+
+</form>

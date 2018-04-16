@@ -1,0 +1,37 @@
+<h5>Search client:</h5>
+<hr />
+<h6>Type your search or click in GET ALL button</h6>
+<a class="waves-effect waves-light btn" (click)="onGetAllClients()">GET ALL</a> 
+<br /><br />
+<form materialize class="col s12">
+  <div class="row">
+    <div class="input-field col s6">
+      <a materialize="tooltip" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Type the client name and it will be searched automatically.">
+        <input placeholder="Type the name" id="inputSearch" 
+          name="inputSearch" type="text" class="validate" 
+          (input)="onChangeSearch()"
+          [(ngModel)]="model.inputSearch" #inputSearch>
+        <label for="inputSearch">Name</label>
+      </a>
+    </div>
+  </div>
+</form>
+
+<ul materialize="collapsible" class="collapsible" data-collapsible="accordion" >
+  <li *ngFor="let client of clients">
+    <div class="collapsible-header"><i class="material-icons">play_arrow</i>{{client.name}}</div>
+    <div class="collapsible-body">
+        <p>Name: {{client.name}}</p>
+        <p>CPF: {{client.cpf}}</p>
+        <p>Email: {{client.email}}</p>
+        <p *ngIf="client.maritalStatus==0">MaritalStatus: Unmarried</p>
+        <p *ngIf="client.maritalStatus==1">MaritalStatus: Married</p>
+        <p>Address: {{client.address}}</p>
+        <p>Phone numbers:</p>
+        <p *ngFor="let phone of client.phones">{{phone}}</p>
+        <p></p>
+        <p><a class="waves-effect waves-light btn modal-trigger" routerLink="/update/{{client.cpf}}">Update</a> 
+           <a class="waves-effect waves-light btn modal-trigger" (click)="deleteItem(client)">Delete</a></p>
+    </div>
+  </li>
+</ul>
