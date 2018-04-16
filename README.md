@@ -33,8 +33,6 @@ if you want to consume the `api` outside dashboard, you can use you can use this
 
 At the root directory contains the directory [postman](https://getpostman.com). This directory a collections file you can use to test the API outside dashboard as well. 
 
-At the root directory contains the directory `printscreens`. This directory contains a the printscreens how the dashboard will be shows up for you.
-
 Best Regards,
 
 Pedro Henrique Olímpio
