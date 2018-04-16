@@ -1,6 +1,4 @@
 
-# Minutrade & Pedro Olímpio
-
 ### Technical features:
 
 * [Angular CLI](https://cli.angular.io/): 1.7.3
@@ -33,7 +31,7 @@ if you want to consume the `api` outside dashboard, you can use you can use this
 * <i> /client/:cpf </i> | Method: DELETE -> Delete an existing client by CPF
 * <i> /client/search/:name </i> | Method: GET -> Search by partial name or a full name (Example: Pedro Henrique Olímpio or Olímpio)
 
-At the root directory contains the directory [postman](getpostman.com). This directory a collections file you can use to test the API outside dashboard as well. 
+At the root directory contains the directory [postman](https://getpostman.com). This directory a collections file you can use to test the API outside dashboard as well. 
 
 At the root directory contains the directory `printscreens`. This directory contains a the printscreens how the dashboard will be shows up for you.
 
